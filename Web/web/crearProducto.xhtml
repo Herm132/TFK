@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <f:facet name="first">
+            <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+            <title>Crear Cliente</title>
+        </f:facet>
+    </h:head>
+
+
+    <h:body>
+        <h:form>       
+
+            <p:panelGrid columns="2">
+                <h:outputText value="ID Producto"/>
+                <p:inputText value="#{JSFManagedProducto.producto.idProducto}"/>
+                <h:outputText value="Nombre Producto:"/>
+                <p:inputText value="#{JSFManagedProducto.producto.nombre}"/>
+                <h:outputText value="Cantidad: "/>
+                <p:inputText type="number" value="#{JSFManagedProducto.producto.cantidad}"/>
+                <h:outputText value="Valor unitario: "/>
+                <p:inputText value="#{JSFManagedProducto.producto.precio}"/>
+                <h:outputText value="Descripción: "/>
+                <p:inputText value="#{JSFManagedProducto.producto.descripcion}"/>
+                <h:outputText value="Imagen: "/>
+                <p:inputText type="file" value="#{JSFManagedProducto.producto.imagen}"/>
+                <h:outputText value="Categoria: "/>
+                <p:inputText value="#{JSFManagedProducto.producto.idCategoria}"/>
+
+                <p:commandButton value="Grabar" id="btnGrabar" action="#{JSFManagedProducto.crearProducto()}"/>
+            </p:panelGrid>
+        </h:form>
+    </h:body>
+
+
+
+
+
+</html >
+

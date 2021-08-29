@@ -28,7 +28,5 @@ public interface PersonaFacadeLocal {
     List<Persona> findRange(int[] range);
 
     int count();
-
-    public Persona validarPersona(String usuario, String clave);
     
 }
